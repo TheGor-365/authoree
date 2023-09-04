@@ -2,5 +2,9 @@ require "authoree/version"
 require "authoree/engine"
 
 module Authoree
-  # Your code goes here...
+  mattr_accessor :consumer_class
+
+  def self.consumer_class
+    @@consumer_class.constantize
+  end
 end
