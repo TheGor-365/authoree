@@ -1,7 +1,18 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
+<div id="<%= dom_id user %>" class="border rounded my-5 p-5">
+  <div class="row">
+    <div class="col-1">
+      <p class="text-muted display-6">
+        Name
+      </p>
+    </div>
 
+    <div class="col">
+      <p class="text-success mb-4">
+        <%= user.name %>
+      </p>
+      <small>
+        <span class="text-muted">Created</span> <%= time_ago_in_words user.created_at %> ago
+      </small>
+    </div>
+  </div>
 </div>
